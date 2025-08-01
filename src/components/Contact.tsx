@@ -10,15 +10,15 @@ const Contact = () => {
     message: ""
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Here you would typically send the form data to your backend
-    toast({
-      title: "Message sent!",
-      description: "Thank you for reaching out. I'll get back to you soon.",
-    });
-    setFormData({ name: "", email: "", message: "" });
-  };
+  // const handleSubmit = (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   // Here you would typically send the form data to your backend
+  //   toast({
+  //     title: "Message sent!",
+  //     description: "Thank you for reaching out. I'll get back to you soon.",
+  //   });
+  //   setFormData({ name: "", email: "", message: "" });
+  // };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -91,7 +91,9 @@ const Contact = () => {
             name="contact"    
             method="POST"
             data-netlify="true"
-            data-netlify-honeypot="bot-field" onSubmit={handleSubmit} className="space-y-6">
+            data-netlify-honeypot="bot-field" 
+            // onSubmit={handleSubmit} 
+            className="space-y-6">
               <input type="hidden" name="form-name" value="contact" />
               <input type="hidden" name="bot-field" />
               <div>
