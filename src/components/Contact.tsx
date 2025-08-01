@@ -87,7 +87,13 @@ const Contact = () => {
           
           {/* Contact Form */}
           <div className="bg-card rounded-xl p-8 shadow-soft">
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form 
+            name="contact"    
+            method="POST"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field" onSubmit={handleSubmit} className="space-y-6">
+              <input type="hidden" name="form-name" value="contact" />
+              <input type="hidden" name="bot-field" />
               <div>
                 <label htmlFor="name" className="block text-sm font-semibold text-card-foreground mb-2">
                   Name *
@@ -118,6 +124,11 @@ const Contact = () => {
                   className="w-full px-4 py-3 bg-input border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-ring transition-colors"
                   placeholder="your.email@example.com"
                 />
+              </div>
+              <div hidden>
+                <label>
+                  Don’t fill this out: <input name="bot-field" />
+                </label>
               </div>
               
               <div>
