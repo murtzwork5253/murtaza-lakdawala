@@ -48,7 +48,7 @@ const Navigation = () => {
               window.scrollTo({ top: 0, behavior: "smooth" });
             }}
           >
-            Alex Johnson
+            Murtaza Lakdawala
           </a>
 
           {/* Desktop Navigation */}

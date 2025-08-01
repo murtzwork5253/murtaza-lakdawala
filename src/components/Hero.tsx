@@ -16,7 +16,7 @@ const Hero = () => {
 
         {/* Main Content */}
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
-          Hi, I'm <span className="text-accent">Alex Johnson</span>
+          Hi, I'm <span className="text-accent">Murtaza Lakdawala</span>
         </h1>
         
         <p className="text-xl md:text-2xl mb-4 text-white/90">

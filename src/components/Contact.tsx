@@ -54,12 +54,12 @@ const Contact = () => {
                 <Mail className="w-6 h-6 text-primary mr-4" />
                 <div>
                   <p className="font-semibold text-card-foreground">Email</p>
-                  <p className="text-muted-foreground">alex.johnson@email.com</p>
+                  <p className="text-muted-foreground">murabilak@gmail.com</p>
                 </div>
               </a>
               
               <a
-                href="https://linkedin.com/in/alexjohnson-dev"
+                href="https://linkedin.com/in/murtaza-lakdawala"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center p-4 bg-card rounded-lg shadow-soft card-hover"

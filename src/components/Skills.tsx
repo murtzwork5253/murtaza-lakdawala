@@ -5,7 +5,7 @@ const Skills = () => {
     {
       icon: <Code2 className="w-6 h-6" />,
       title: "Languages",
-      skills: ["Dart", "Kotlin", "Java", "JavaScript", "TypeScript"]
+      skills: ["Dart", "Kotlin", "Java", "JavaScript", "HTML", "CSS"]
     },
     {
       icon: <Smartphone className="w-6 h-6" />,
@@ -15,7 +15,7 @@ const Skills = () => {
     {
       icon: <Database className="w-6 h-6" />,
       title: "Backend & Database",
-      skills: ["Firebase", "REST APIs", "SQLite", "Room Database"]
+      skills: ["Firebase", "REST APIs", "SQLite", "Supabase", "PostgreSQL"]
     },
     {
       icon: <Globe className="w-6 h-6" />,
@@ -25,7 +25,7 @@ const Skills = () => {
     {
       icon: <Zap className="w-6 h-6" />,
       title: "Architecture",
-      skills: ["MVVM", "Clean Architecture", "Provider", "Bloc"]
+      skills: ["Clean Architecture", "Provider", "Bloc","Riverpod","State Management"]
     },
     {
       icon: <Palette className="w-6 h-6" />,
