@@ -1,73 +1,166 @@
-# Welcome to your Lovable project
+# Mobile Developer Portfolio
 
-## Project info
+A modern, responsive portfolio website for mobile app developers, showcasing skills in Flutter, Kotlin, and Java.
 
-**URL**: https://lovable.dev/projects/da7b7c09-d8b3-4c8c-a79c-298d1ce80183
+## 🚀 Live Demo
 
-## How can I edit this code?
+**URL**: [Your Netlify URL here]
 
-There are several ways of editing your application.
+## ✨ Features
 
-**Use Lovable**
+- **Modern Design**: Clean, professional design with smooth animations
+- **Responsive**: Optimized for all devices (mobile, tablet, desktop)
+- **Fast Loading**: Optimized performance with Vite and modern build tools
+- **SEO Optimized**: Proper meta tags and semantic HTML structure
+- **Accessible**: Built with accessibility best practices
+- **Easy to Customize**: Well-organized code structure for easy modifications
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/da7b7c09-d8b3-4c8c-a79c-298d1ce80183) and start prompting.
+## 🛠️ Built With
 
-Changes made via Lovable will be committed automatically to this repo.
+- **React 18** - Modern React with hooks
+- **TypeScript** - Type safety and better development experience
+- **Tailwind CSS** - Utility-first CSS framework
+- **Vite** - Fast build tool and development server
+- **Lucide React** - Beautiful, customizable icons
+- **React Router** - Client-side routing
+- **Shadcn/ui** - High-quality, accessible UI components
 
-**Use your preferred IDE**
+## 📱 Sections
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+1. **Hero** - Introduction with name, title, and call-to-action
+2. **About** - Brief professional bio and passion statement
+3. **Skills** - Technical skills organized by categories
+4. **Projects** - Featured mobile app projects with screenshots
+5. **Contact** - Contact form and social media links
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🚀 Quick Start
 
-Follow these steps:
+### Prerequisites
+- Node.js 18+ and npm
+- Git for version control
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### Installation
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/mobile-developer-portfolio.git
+   cd mobile-developer-portfolio
+   ```
 
-# Step 3: Install the necessary dependencies.
-npm i
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+3. **Start the development server**
+   ```bash
+   npm run dev
+   ```
+
+4. **Open your browser**
+   Navigate to `http://localhost:8080`
+
+### Build for Production
+```bash
+npm run build
 ```
 
-**Edit a file directly in GitHub**
+## 📦 Deployment
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Deploy to Netlify (Recommended)
 
-**Use GitHub Codespaces**
+1. **Push to GitHub**
+   ```bash
+   git add .
+   git commit -m "Initial commit"
+   git push origin main
+   ```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+2. **Connect to Netlify**
+   - Go to [netlify.com](https://netlify.com)
+   - Click "New site from Git"
+   - Select your repository
+   - Build settings auto-detect (Build: `npm run build`, Publish: `dist`)
+   - Deploy!
 
-## What technologies are used for this project?
+**See [DEPLOYMENT.md](./DEPLOYMENT.md) for detailed deployment instructions.**
 
-This project is built with:
+## 🎨 Customization
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### Update Personal Information
 
-## How can I deploy this project?
+1. **Hero Section** (`src/components/Hero.tsx`)
+   - Change name, title, and tagline
+   - Replace profile photo
 
-Simply open [Lovable](https://lovable.dev/projects/da7b7c09-d8b3-4c8c-a79c-298d1ce80183) and click on Share -> Publish.
+2. **About Section** (`src/components/About.tsx`)
+   - Update bio and description
 
-## Can I connect a custom domain to my Lovable project?
+3. **Projects Section** (`src/components/Projects.tsx`)
+   - Add your projects
+   - Update screenshots, descriptions, and links
 
-Yes, you can!
+4. **Contact Section** (`src/components/Contact.tsx`)
+   - Update email and social media links
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+### Replace Assets
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+- **Profile Photo**: `src/assets/profile-photo.jpg`
+- **Project Screenshots**: `src/assets/*.jpg`
+- **Resume**: `public/resume.pdf`
+- **Favicon**: `public/favicon.png`
+
+### Color Scheme
+
+The design system is defined in `src/index.css`. You can customize:
+- Primary colors (blue theme)
+- Secondary colors (teal theme)
+- Accent colors
+- Gradients and shadows
+
+## 📧 Contact Form Setup
+
+The contact form currently shows a success message. To make it functional:
+
+1. **Netlify Forms** (Recommended for Netlify hosting)
+   ```html
+   <form netlify>
+   ```
+
+2. **Formspree** or other form services
+   - Sign up for a form service
+   - Update the form action URL
+
+3. **Custom Backend**
+   - Create an API endpoint
+   - Update the `handleSubmit` function
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- Built with [Lovable](https://lovable.dev) - AI-powered web development
+- Icons by [Lucide](https://lucide.dev)
+- Fonts by [Google Fonts](https://fonts.google.com)
+- UI components by [Shadcn/ui](https://ui.shadcn.com)
+
+## 📞 Support
+
+For issues and questions:
+- Check the [DEPLOYMENT.md](./DEPLOYMENT.md) guide
+- Create an issue in this repository
+- Contact: alex.johnson@email.com
+
+---
+
+Made with ❤️ by Alex Johnson

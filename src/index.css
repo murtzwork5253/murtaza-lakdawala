@@ -2,41 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Modern Portfolio Design System - Clean, professional mobile developer theme */
 
 @layer base {
   :root {
+    /* Background & Surface Colors */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 215 25% 15%;
+    --surface: 210 20% 98%;
+    --surface-variant: 210 15% 95%;
 
+    /* Brand Colors - Blue & Teal Theme */
+    --primary: 214 84% 56%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 214 84% 70%;
+    --primary-dark: 214 84% 45%;
+
+    --secondary: 174 62% 47%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-light: 174 62% 60%;
+
+    --accent: 45 93% 62%;
+    --accent-foreground: 215 25% 15%;
+
+    /* Neutral Grays */
+    --muted: 210 15% 96%;
+    --muted-foreground: 215 15% 45%;
+    --subtle: 210 10% 92%;
+
+    /* Interactive States */
+    --border: 214 15% 88%;
+    --input: 214 15% 92%;
+    --ring: 214 84% 56%;
+
+    /* Card & Components */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 215 25% 15%;
+    --card-shadow: 215 25% 15% / 0.08;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    /* Status Colors */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 215 25% 15%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Special Effects */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--primary-light)), hsl(var(--accent)));
+    --shadow-soft: 0 4px 12px hsl(var(--card-shadow));
+    --shadow-medium: 0 8px 32px hsl(var(--card-shadow));
+    --glow-primary: 0 0 40px hsl(var(--primary) / 0.3);
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
+    --radius: 12px;
 
     --sidebar-background: 0 0% 98%;
 
@@ -94,12 +113,68 @@ All colors MUST be HSL.
   }
 }
 
+}
+
 @layer base {
   * {
     @apply border-border;
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Portfolio-specific components */
+  .hero-gradient {
+    background: var(--gradient-primary);
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-medium hover:-translate-y-1;
+  }
+
+  .section-padding {
+    @apply px-6 py-16 lg:px-8 lg:py-24;
+  }
+
+  .container-width {
+    @apply max-w-6xl mx-auto;
+  }
+
+  .skill-badge {
+    @apply inline-flex items-center px-4 py-2 rounded-full text-sm font-medium;
+    @apply bg-gradient-to-r from-primary/10 to-secondary/10;
+    @apply border border-primary/20 text-primary-dark;
+    @apply transition-all duration-200 hover:scale-105 hover:shadow-soft;
+  }
+
+  .project-card {
+    @apply bg-card rounded-xl p-6 shadow-soft border border-border;
+    @apply transition-all duration-300 hover:shadow-medium hover:-translate-y-2;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center px-6 py-3 rounded-lg font-semibold;
+    @apply bg-gradient-to-r from-primary to-primary-dark text-primary-foreground;
+    @apply transition-all duration-200 hover:scale-105 hover:shadow-soft;
+    @apply focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center px-6 py-3 rounded-lg font-semibold;
+    @apply border border-border bg-card text-card-foreground;
+    @apply transition-all duration-200 hover:bg-surface hover:scale-105;
+    @apply focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2;
+  }
+
+  .section-title {
+    @apply text-3xl lg:text-4xl font-bold text-center mb-12;
+    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
   }
 }
